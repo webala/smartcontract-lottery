@@ -40,7 +40,7 @@ contract Lottery is VRFConsumerBaseV2, Ownable {
         usdEntyFee = 50 * (10**18);
         ehtUsdPriceFeed = AggregatorV3Interface(_priceFeedAddress);
         lottery_state = LOTTERY_STATE.CLOSED;
-        COORDINATOR = VRFCoordinatorV2Interface(vrfCoordinator);
+        COORDINATOR = VRFCoordinatorV2Interface();
         subId = _subId;
     }
 

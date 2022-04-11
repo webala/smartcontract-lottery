@@ -7,5 +7,12 @@ compiler:
       - '@chainlink=smartcontractkit/chainlink-brownie-contracts@0.4.0'
       - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.5.0'
 networks:
+  default: development
+  rinkeby:
+    vrf_coordinator: '0x6168499c0cFfCaCD319c818142124B7A15E857ab'
+    eth_usd_price_feed: '0x8A753747A1Fa494EC906cE90E9f37563A8AF630e'
+    verify: True
   mainnet-fork: 
     eth_usd_price_feed: '0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419'
+wallets:
+  from_key: ${PRIVATE_KEY}
